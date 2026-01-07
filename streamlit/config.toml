@@ -1,0 +1,41 @@
+cat > .streamlit/config.toml << 'EOF'
+[theme]
+primaryColor = "#6366F1"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F3F4F6"
+textColor = "#1F2937"
+font = "sans serif"
+
+[server]
+maxUploadSize = 200
+enableCORS = false
+enableXsrfProtection = true
+enableStaticServing = true
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
+
+[client]
+showErrorDetails = true
+
+[runner]
+magicEnabled = false
+
+[logger]
+level = "info"
+
+[global]
+developmentMode = false
+showToolbar = true
+showPadding = true
+
+[deprecation]
+showfileUploaderEncoding = true
+showImageFormat = true
+
+[experimental]
+enableGetHeaders = false
+enableCaching = true
+enableQueryParams = true
+EOF
