@@ -1,4 +1,3 @@
-cat > utils/__init__.py << 'EOF'
 """
 Utilities package for Audio Steganography App
 """
@@ -10,4 +9,3 @@ __all__ = [
 ]
 
 __version__ = "1.0.0"
-EOF

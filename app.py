@@ -3,7 +3,16 @@ Audio Steganography Tool
 Clean working version - Fixed LSB encoding/decoding
 """
 
+import sys
 import streamlit as st
+
+# Automatically launch Streamlit web server if executed directly with `python app.py`
+if __name__ == "__main__" and not st.runtime.exists():
+    import streamlit.web.cli as stcli
+    sys.argv = ["streamlit", "run", __file__] + sys.argv[1:]
+    sys.exit(stcli.main())
+
+
 import numpy as np
 from scipy.io import wavfile
 import io
@@ -17,22 +26,31 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Add some CSS styling
+# Add some CSS styling for dark theme
 st.markdown("""
 <style>
+    /* Dark Theme Button Styling */
     .stButton > button {
-        background-color: #4CAF50;
-        color: white;
-        border-radius: 5px;
+        background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+        color: #FFFFFF !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
         padding: 10px 24px;
-        font-weight: bold;
+        font-weight: 600;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
     }
     .stButton > button:hover {
-        background-color: #45a049;
+        background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%);
+        box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+        border-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-1px);
     }
+    /* Dark Theme File Uploader */
     .stFileUploader > div {
-        border: 2px dashed #4CAF50;
-        border-radius: 10px;
+        border: 2px dashed #6366F1;
+        background-color: rgba(26, 34, 52, 0.6);
+        border-radius: 12px;
         padding: 20px;
     }
 </style>
@@ -395,9 +413,9 @@ with tab2:
 st.markdown("---")
 st.markdown(
     """
-    <div style="text-align: center; color: #6b7280; padding: 2rem;">
+    <div style="text-align: center; color: #94a3b8; padding: 2rem;">
         <p>🔊 Audio Steganography Tool v1.1 | Made with ❤️ using Streamlit</p>
-        <p style="font-size: 0.9rem;">
+        <p style="font-size: 0.9rem; color: #64748b;">
             For educational purposes only. Always respect privacy and copyright laws.
         </p>
     </div>

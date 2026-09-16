@@ -1,4 +1,3 @@
-cat > components/header.py << 'EOF'
 """
 Header Component for Audio Steganography App
 """
@@ -123,37 +122,40 @@ def show_header():
     ">
         <a href="#encode" style="
             text-decoration: none;
-            color: #667eea;
+            color: #a5b4fc;
             padding: 0.5rem 1rem;
             border-radius: 8px;
-            background: #f0f4ff;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.3);
             font-weight: 600;
             transition: all 0.3s;
-        " onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+        ">
             🔒 Encode Message
         </a>
         
         <a href="#decode" style="
             text-decoration: none;
-            color: #764ba2;
+            color: #c084fc;
             padding: 0.5rem 1rem;
             border-radius: 8px;
-            background: #f9f0ff;
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.3);
             font-weight: 600;
             transition: all 0.3s;
-        " onmouseover="this.style.background='#f3e8ff'" onmouseout="this.style.background='#f9f0ff'">
+        ">
             🔓 Decode Message
         </a>
         
         <a href="#guide" style="
             text-decoration: none;
-            color: #10b981;
+            color: #6ee7b7;
             padding: 0.5rem 1rem;
             border-radius: 8px;
-            background: #f0fdf4;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
             font-weight: 600;
             transition: all 0.3s;
-        " onmouseover="this.style.background='#dcfce7'" onmouseout="this.style.background='#f0fdf4'">
+        ">
             📚 User Guide
         </a>
     </div>
@@ -192,21 +194,22 @@ def show_status_header(status: str, icon: str = "ℹ️"):
     """
     status_html = f"""
     <div style="
-        background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+        background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
         padding: 1rem;
         border-radius: 10px;
         margin: 1rem 0;
-        border-left: 5px solid #667eea;
+        border-left: 5px solid #6366f1;
+        border: 1px solid rgba(255, 255, 255, 0.08);
     ">
         <div style="display: flex; align-items: center; gap: 1rem;">
             <span style="font-size: 2rem;">{icon}</span>
             <div>
-                <h4 style="margin: 0; color: #1e293b;">Current Status</h4>
-                <p style="margin: 0.5rem 0 0 0; color: #475569;">{status}</p>
+                <h4 style="margin: 0; color: #f8fafc;">Current Status</h4>
+                <p style="margin: 0.5rem 0 0 0; color: #94a3b8;">{status}</p>
             </div>
         </div>
     </div>
     """
     
     st.markdown(status_html, unsafe_allow_html=True)
-EOF
+

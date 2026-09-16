@@ -1,4 +1,3 @@
-cat > utils/steganography.py << 'EOF'
 """
 Simple Audio Steganography Engine
 Working version for basic LSB steganography
@@ -171,4 +170,4 @@ class AudioSteganography:
                 binary_data.append(str(bit))
         
         return ''.join(binary_data)
-EOF
+

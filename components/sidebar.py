@@ -1,4 +1,3 @@
-cat > components/sidebar.py << 'EOF'
 """
 Sidebar Component for Audio Steganography App
 """
@@ -118,4 +117,4 @@ def show_sidebar():
         'error_correction': error_correction,
         'add_noise': add_noise
     }
-EOF
+

@@ -1,4 +1,3 @@
-cat > components/footer.py << 'EOF'
 """
 Footer Component for Audio Steganography App
 """
@@ -18,9 +17,9 @@ def show_footer():
     <div style="
         text-align: center;
         padding: 2rem 1rem;
-        color: #64748b;
+        color: #94a3b8;
         font-size: 0.9rem;
-        border-top: 1px solid #e2e8f0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         margin-top: 3rem;
     ">
         <p>&copy; {current_year} Audio Steganography Pro</p>
@@ -32,4 +31,3 @@ def show_footer():
     """
     
     st.markdown(footer_html, unsafe_allow_html=True)
-EOF

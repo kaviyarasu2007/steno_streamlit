@@ -51,3 +51,15 @@ A sophisticated web application for hiding and extracting secret messages in aud
    ```bash
    git clone https://github.com/yourusername/audio-steganography.git
    cd audio-steganography
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the application**
+   ```bash
+   streamlit run app.py
+   ```
+   *(Alternatively, you can also run `python app.py`)*

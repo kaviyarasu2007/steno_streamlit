@@ -1,4 +1,3 @@
-cat > components/__init__.py << 'EOF'
 """
 Components package for Audio Steganography App
 """
@@ -16,4 +15,3 @@ __all__ = [
 ]
 
 __version__ = "1.0.0"
-EOF
